@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+.Main-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+}
+.header-section{
+    width: 100%;
+    background-color: #014EA3;
+}
+.header-section header {
+    width: 100%;
+    background-color: #014EA3;
+}
+.header-section header .main-menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.logo img {
+    width: 50%;
+    transition: transform 0.3s ease;
+}
+.logo {
+    justify-content: center;
+    width: 35%;
+}
+nav {
+    width: 65%;
+    justify-content: center;
+}
+/* .logo img:hover {
+    transform: scale(1.1);
+} */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav a {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05em;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
+}
+h1 {
+    align-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 2.5em;
+    margin: 0 auto;
+    font-weight: 700;
+    text-align: center;
+    max-width: 750px;
+    padding-top: 20px;
+    letter-spacing: 1px;
+    color: #f9f9f9;
+    z-index: 2;
+    animation: fadeInDown 1.5s ease-out;
+}
+.heading {
+    text-align: center;
+    height: 300px;
+    background-image: url(./photos/banner.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInLeft 1.2s ease-in-out;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1300px;
+    margin: 0 auto 60px;
+}
+.register-card {
+    background: white;
+    border-radius: 112px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 40px;
+}
+.card-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    perspective: 1000px;
+}
+.card.active {
+    background-color: #014EA3;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(1, 78, 163, 0.4);
+    z-index: 1;
+}
+.card h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+.card .image{
+    width: 60px;
+    border-radius: 100%;
+}
+.card.active p {
+    color: #fff;
+}
+.cta-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #140900, #014EA3);
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background: linear-gradient(135deg, #014EA3, #050505);
+}
+.app-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.app-icons img {
+    width: 140px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+.app-icons img:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+.footer {
+font-family: Plus Jakarta Sans;
+font-weight: 250;
+color: #666; 
+font-size: 0.8125em; 
+line-height: 1.5; 
+border-top: 1px solid #030303;
+}
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 50px;
+max-width: 100%; 
+background-color: white;
+margin: 0 auto;
+animation: fadeInUp 1.3s ease;
+}
+.footer-container p {
+font-size: 14px;
+}
+.footer-container p a {
+text-decoration: none;
+color: #000;
+}
+.hamburger {
+display: none;
+font-size: 1.875em;
+cursor: pointer;
+position: fixed;
+}
+.menu-toggle {
+display: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+.full-width-section {
+    width: 100%;
+    background: linear-gradient(135deg, #ffffff 0%, #084b8f57 100%);
+    color: black;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.full-width-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
+    opacity: 0.1;
+}
+
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.full-width-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(left, #014fa3a1, #080808b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.full-width-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.full-width-section .cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #014EA3, #050505);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    animation: fadeInUp 2.5s ease-in-out;
+}
+
+.full-width-section .cta-button:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #050505, #014EA3);
+}
+.image-gallery {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeInUp 2.8s ease-in-out;
+}
+
+.image-gallery .image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-gallery .image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .card-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
